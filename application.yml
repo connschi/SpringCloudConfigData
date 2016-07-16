@@ -1,0 +1,62 @@
+---
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:8010/eureka/
+   instance:
+      metadata-map: instanceId=${spring.application.name}:${spring.application.instance_id:${random.value}}
+---
+
+spring:
+   profiles: subject
+   application:
+      name: subject
+words: I, You, He, She, It
+server:
+   port: 8040
+
+ 
+---
+spring:
+   profiles: verb             
+   application:
+      name: verb
+words: ran,knew,had,saw,bought
+server:
+    port: 8050
+
+---
+spring:
+   profiles: article
+   application:
+       name: article
+words: a,the
+server:
+    port: 8060
+
+---
+spring:
+   profiles: adjective
+   application:
+      name: adjective
+words: reasonable, leasky, suspicious, ordinary, unlikely
+server:
+    port: 8070
+
+---
+spring:
+   profiles: noun1
+   application:
+      name: noun
+words: boat, book, vote, seat, backpack, partition, groundhog
+server:
+  port: 8080
+
+---
+spring:
+  profiles: noun2
+  application:
+      name: noun2
+words: refrigator, ice, snowball, snow
+server:
+  port: 8081
