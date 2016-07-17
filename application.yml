@@ -62,7 +62,7 @@ spring:
       name: noun
 words: refrigator, ice, snowball, snow
 server:
-  port: 8081
+  port: 8080
 eureka:
    instance:
       instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
